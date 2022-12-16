@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <container>
+      <div>
+        <h1>RULES</h1>
+        <img
+          src="./images/icon-close.svg"
+          alt="Close image"
+          id="closeRulesPC"
+          onclick="toggleMenu()"
+        />
+      </div>
+      <img src="./images/image-rules.svg" alt="Rules image" />
+      <img
+        src="./images/icon-close.svg"
+        alt="Close image"
+        id="closeRules"
+        onclick="toggleMenu()"
+      />
+    </container>
+    <!-- RULES -->
+
+    <nav>
+      <img src="./images/logo.svg" alt="Logo" />
+      <div class="score">
+        <h4>SCORE</h4>
+        <p id="scoreNumber">0</p>
+      </div>
+    </nav>
+
+    <main>
+      <div class="game" id="game">
+        <div class="playerChoices">
+          <div class="choiceNorthRow">
+            <button class="btn-choice btn-paper" onclick="playerChoice(1)">
+              <span class="base">
+                <img
+                  class="choice"
+                  id="paper"
+                  src="./images/icon-paper.svg"
+                  alt="paper"
+                />
+              </span>
+            </button>
+            <button class="btn-choice btn-scissors" onclick="playerChoice(2)">
+              <span class="base">
+                <img
+                  class="choice"
+                  src="./images/icon-scissors.svg"
+                  alt="Scissors"
+                  id="scissors"
+                />
+              </span>
+            </button>
+          </div>
+          <div class="choiceSouthRow">
+            <button class="btn-choice btn-rock" onclick="playerChoice(0)">
+              <span class="base">
+                <img
+                  class="choice"
+                  id="rock"
+                  src="./images/icon-rock.svg"
+                  alt="rock"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="post">
+        <div id="youPick">
+          <span class="base"><div id="playerChoice"></div></span>
+          <h6>YOU'VE PICKED</h6>
+        </div>
+        <div id="housePick">
+          <span class="base" id="housePickBase">
+            <div id="pcChoice"></div>
+          </span>
+          <h6>THE HOUSE PICKED</h6>
+        </div>
+      </div>
+
+      <div id="end">
+        <div class="winTitle">
+          <div id="winner">Winner</div>
+        </div>
+        <div class="playAgain">
+          <div class="btn-playAgain" onclick="playAgain()">PLAY AGAIN</div>
+        </div>
+      </div>
+    </main>
+    <!-- You Win You Lose Play Again -->
+
+    <footer>
+      <div class="btnRules">
+        <div id="rules" onclick="toggleMenu()">RULES</div>
+      </div>
+
+      <credits>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+        coded by <a href="https://github.com/RoddGarcia">Rodrigo Garcia</a>
+      </credits>
+    </footer>
+  </body>
+</html>
